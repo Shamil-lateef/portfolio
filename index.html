@@ -42,7 +42,7 @@
       display: flex;
       align-items: center;
       gap: 16px;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
     }
 
     .avatar {
@@ -113,6 +113,7 @@
       h1 { font-size: 24px; }
       .avatar { width: 70px; height: 95px; font-size: 24px; }
       .section-block { padding: 14px; }
+      header { flex-wrap: nowrap; } /* Prevent stacking on very small screens */
     }
   </style>
 </head>
@@ -214,4 +215,5 @@
   </script>
 </body>
 </html>
+
 
