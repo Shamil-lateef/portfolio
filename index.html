@@ -7,68 +7,120 @@
   <meta name="description" content="Portfolio & résumé of Shamil Lateef — Pharmacist & Regulatory Affairs Professional" />
   <style>
     :root {
-margin-top: 24px;
-}
+      --accent:#2563eb;
+      --muted:#9ca3af;
+      --bg:#0f172a;
+      --card:#1a2337;
+      --glass:rgba(255,255,255,0.05);
+    }
 
+    * { box-sizing: border-box; }
+    body {
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+      margin: 0;
+      line-height: 1.6;
+      background: linear-gradient(180deg,#020617 0%, #0f172a 100%);
+      color: #e8edf5;
+      padding: 20px;
+    }
 
-section h2 {
-margin: 0 0 10px;
-font-size: 17px;
-color: #dceaff;
-letter-spacing: 0.4px;
-}
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
 
+    .card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      padding: 24px;
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+      backdrop-filter: blur(6px);
+    }
 
-.section-block {
-padding: 16px;
-border-radius: 12px;
-background: rgba(255,255,255,0.04);
-border: 1px solid rgba(255,255,255,0.05);
-}
+    header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
 
+    .avatar {
+      width: 90px;
+      height: 120px;
+      border-radius: 14px;
+      background: linear-gradient(135deg,var(--accent),#7c3aed);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: white;
+      font-size: 32px;
+      flex-shrink: 0;
+    }
 
-.job { margin-bottom: 14px; }
-.role { font-weight: 600; font-size: 15px; }
-.meta { font-size: 13px; color: var(--muted); }
+    h1 { margin: 0; font-size: 28px; line-height: 1.2; }
+    p.lead { margin: 4px 0; color: var(--muted); }
 
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 24px;
+      margin-top: 24px;
+    }
 
-.contact a {
-color: var(--accent);
-text-decoration: none;
-word-break: break-all;
-}
+    section h2 {
+      margin: 0 0 10px;
+      font-size: 17px;
+      color: #dceaff;
+      letter-spacing: 0.4px;
+    }
 
+    .section-block {
+      padding: 16px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.05);
+    }
 
-footer {
-margin-top: 24px;
-color: var(--muted);
-font-size: 13px;
-text-align: center;
-}
+    .job { margin-bottom: 14px; }
+    .role { font-weight: 600; font-size: 15px; }
+    .meta { font-size: 13px; color: var(--muted); }
 
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+      word-break: break-all;
+    }
 
-/* ---------------------------
-MOBILE RESPONSIVE DESIGN
---------------------------- */
-@media (max-width: 820px) {
-body { padding: 14px; }
-.two-col { grid-template-columns: 1fr; }
-.card { padding: 20px; }
-}
+    footer {
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
 
+    /* ---------------------------
+       MOBILE RESPONSIVE DESIGN
+       --------------------------- */
+    @media (max-width: 820px) {
+      body { padding: 14px; }
+      .two-col { grid-template-columns: 1fr; }
+      .card { padding: 20px; }
+    }
 
-@media (max-width: 480px) {
-h1 { font-size: 24px; }
-.avatar { width: 70px; height: 70px; font-size: 24px; }
-.section-block { padding: 14px; }
-}
+    @media (max-width: 480px) {
+      h1 { font-size: 24px; }
+      .avatar { width: 70px; height: 95px; font-size: 24px; }
+      .section-block { padding: 14px; }
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="card">
       <header>
-        <img src="./assets/images/Photo.jpeg" alt="Shamil Lateef pic" class="avatar">
+        <img src="./assets/images/Photo.jpeg" class="avatar">
         <div>
           <h1>Shamil Lateef</h1>
           <p class="lead">Pharmacist · MSc Pharmacology — Regulatory Affairs Manager</p>
@@ -133,26 +185,26 @@ h1 { font-size: 24px; }
         <aside>
           <section class="section-block contact" id="contact">
             <h2>Contact</h2>
-            <p class="meta">Email: <a href="mailto:shamil.lateef1@gmail.com">shamil.lateef1@gmail.com</a><br/>Phone: <a href="tel:+9647700000000">+9647507790666</a></p>
+            <p class="meta">Email: <a href="mailto:shamil.lateef1@gmail.com">your.email@example.com</a><br/>Phone: <a href="tel:+9647700000000">+9647507790666</a></p>
             
           </section>
 
           <section class="section-block" style="margin-top:14px">
             <h2>Languages</h2>
-            <p>Kurdish (Native)<br/>Arabic (Advanced)<br/>English (Proficient)</p>
+            <p>Kurdish (Native)<br/>Arabic (Proficient)<br/>English (Advanced)</p>
           </section>
 
           <section class="section-block" style="margin-top:14px">
             <h2>Download</h2>
             <p class="meta">Want a PDF copy of this résumé?</p>
-            <p><a class="badge" href="Shamil_Lateef_resume.pdf">Download PDF</a></p>
+            <p><a class="badge" href="#">Download PDF</a></p>
           </section>
 
         </aside>
       </div>
 
       <footer>
-        © <span id="year"></span> Shamil Lateef
+        © <span id="year"></span> Shamil Lateef — Built with care. • <span class="meta">Designed for clarity and easy GitHub hosting</span>
       </footer>
     </div>
   </div>
@@ -162,6 +214,3 @@ h1 { font-size: 24px; }
   </script>
 </body>
 </html>
-
-
-
